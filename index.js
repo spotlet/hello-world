@@ -10,6 +10,8 @@ function onrequest (req, res) {
 }
 
 // init
-if (!PORT) { process.exit(1); }
-else { server.listen(PORT); }
+if (!PORT) {
+  console.error("SPOTLET_HTTP_PORT not defined");
+  process.exit(1);
+} else { server.listen(PORT); }
 
